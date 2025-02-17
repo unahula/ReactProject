@@ -6,11 +6,11 @@ export const TodoForm = ({ addTodo }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (value.trim() === "") {
-      alert("Task cannot be empty!"); // Prevent empty tasks
+      alert("Task cannot be empty!"); 
       return;
     }
     addTodo(value);
-    setValue(""); // ✅ Clears input after submission
+    setValue(""); 
   };
 
   return (

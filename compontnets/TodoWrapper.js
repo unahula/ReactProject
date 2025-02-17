@@ -7,24 +7,24 @@ import { v4 as uuidv4 } from "uuid";
 export const TodoWrapper = () => {
   const [todos, setTodos] = useState([]);
 
-  // ✅ Add a new task
+  
   const addTodo = (todo) => {
     setTodos([...todos, { id: uuidv4(), task: todo, completed: false, isEditing: false }]);
   };
 
-  // ✅ Delete a task
+  
   const deleteTodo = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
-  // ✅ Toggle Edit Mode
+  
   const toggleEditTodo = (id) => {
     setTodos(todos.map((todo) =>
       todo.id === id ? { ...todo, isEditing: !todo.isEditing } : todo
     ));
   };
 
-  // ✅ Update Task (Edit Functionality)
+  
   const updateTask = (updatedTask, id) => {
     setTodos(todos.map((todo) =>
       todo.id === id ? { ...todo, task: updatedTask, isEditing: false } : todo

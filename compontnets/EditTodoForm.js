@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export const EditTodoForm = ({ editTodo, task }) => {
-  const [value, setValue] = useState(task.task); // ✅ Set initial state to existing task
+  const [value, setValue] = useState(task.task); // 
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -9,7 +9,7 @@ export const EditTodoForm = ({ editTodo, task }) => {
       alert("Task cannot be empty!"); // Prevent empty tasks
       return;
     }
-    editTodo(value, task.id); // ✅ Pass updated task and ID
+    editTodo(value, task.id); 
   };
 
   return (
